@@ -32,8 +32,12 @@ public class TouristController {
         }
     }
 
-    // POST /attractions/add - Add a new tourist attraction
-    @PostMapping("/add")
+    // GET /attractions/{name}/tags
+
+    // GET /attractions/add
+
+    // POST /attractions/save - save a new tourist attraction
+    @PostMapping("/save")
     @ResponseBody
     public ResponseEntity<String> addAttraction(@RequestParam String name) {
         if (TouristRepository.attractions.contains(name)) {
@@ -42,6 +46,8 @@ public class TouristController {
         TouristRepository.attractions.add(name);
         return new ResponseEntity<>("Attraction added successfully", HttpStatus.CREATED);
     }
+
+    // GET attractions/{name}/edit
 
     // POST /attractions/update - Update an existing tourist attraction
     @PostMapping("/update")

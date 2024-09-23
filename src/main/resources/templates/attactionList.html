@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tourist Guide</title>
+    <link th:href="@{/main.css}" rel="stylesheet">
+    <link href="/static/main.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Tourist Attractions:</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Tokyo Tower</td>
+            <td>Old red and white radio tower in the style of the Eiffel Tower</td>
+            <td>
+                <button class="btn-update">Update</button>
+                <button class="btn-delete">Delete</button>
+                <button class="btn-tag">Tags</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Shibuya Crossing</td>
+            <td>World's busiest street crossing in the middle of Tokyo</td>
+            <td>
+                <button class="btn-update">Update</button>
+                <button class="btn-delete">Delete</button>
+                <button class="btn-tag">Tags</button>
+            </td>
+        </tr>
+    </table>
+    <button id="btn-add">Add attraction</button>
+    <img id="tourist-img" src="/static/images/tourist.png" alt="">
+</body>
+</html>
